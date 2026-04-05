@@ -15,7 +15,6 @@ Carry: out std_logic;
 Zero: out std_logic
     );
 end ALU;
-
 architecture logic of ALU is
   signal ShiftLeftS, ShiftRightS: unsigned(6 downto 0);  -- Allow for up to 32-bit shift
   signal Car, Zer: std_logic := '0';
@@ -31,7 +30,8 @@ begin
     if Alu_Enable = '1' and rising_edge(clk) then 
       case ControlSignal is
 
-        when "000" => Y <= A + B; 
+        when "000" =>
+        Y <= A + B; 
         Car <= '1' when (A(31) = '1' and B(31) = '1');
         Zer <= '1' when (A + B = 0); 
 

@@ -1,0 +1,5 @@
+#+title: Virtual Analog Synth Notes
+#+filetags: :Projects:
+
+* VCO
+
