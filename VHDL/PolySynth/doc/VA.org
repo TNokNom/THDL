@@ -1,5 +1,22 @@
 #+title: Virtual Analog Synth Notes
 #+filetags: :Projects:
-
+* Moog Modeling Notes
+** Clock
++ The synth clock is separate from the main clock of the board
+  - we'll try to run this clock at 50 mhz and derive the wave states from this 
+** How the octaves work
++ Each octave is a doubling of the frequency
++ The octave selector on the Moog has 4 values ranging from 2' to 16'
+  - 2' would be the highest and it would be 2 octaves above 8' (1760 hz)
+  - 16' would be one octave below 8' (220 hz)
+  - 8' would be directly in the middle (440 hz)
+    
 * VCO
+
+
+
+* Wave States
+** Sawtooth
++ 
+
 

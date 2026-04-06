@@ -1,11 +1,13 @@
 import matplotlib.pyplot as plot
 import numpy as np
-from numpy import sin,pi
-x = np.linspace(0,1,500)
-lut = sin(2*x*pi)* 7500 + 7500
-for i, val in enumerate(lut):
-    if i % 20:
-        print(int(val), end = '1')
-    else:
-        print (int(val), end = '1')
-        print ('')
+
+sample_rate = 44100
+duration = 0.02  # seconds
+t = np.linspace(0, duration, int(sample_rate * duration), endpoint=False)
+
+frequency = 440  # A4
+y = 2 * ((t * frequency) % 1) - 1   # sawtooth from -1 to 1
+
+plot.plot(t, y)
+plot.title("Sawtooth Wave at 440 Hz")
+plot.show()
