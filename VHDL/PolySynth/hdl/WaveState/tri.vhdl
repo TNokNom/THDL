@@ -17,6 +17,7 @@ architecture behavior of triangle is
 type me is array (90 downto 0) of integer;
 signal count: integer := 0;
 signal direction: std_logic := '0';
+signal go: std_logic := '0';
 begin
 process(freq_clk)
 begin
@@ -35,8 +36,9 @@ elsif rising_edge(freq_clk) then
 
      elsif (count = 20) then  
        direction <= '1';
+       go <= '1';
 
-     elsif (direction = '1' and count < 0 ) then 
+     elsif (go = '1' and direction ='1' ) then 
        count <= count - 1;
 
      elsif (count = 0) then 
