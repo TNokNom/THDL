@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "Clock_Divider_behav" "xil_defaultlib.Clock_Divider" -log "elaborate.log" 

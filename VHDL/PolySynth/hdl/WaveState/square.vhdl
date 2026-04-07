@@ -4,6 +4,7 @@ use IEEE.numeric_std.ALL;
   
 entity Clock_Divider is
 port ( 
+en_s: in std_logic;
 freq_clk: in std_logic;
 reset: in std_logic;
 octave: in std_logic_vector(1 downto 0);
@@ -61,6 +62,9 @@ if (count = 25) then
 else
 count <= count + 1;
 end if;
+
+when others =>
+count <= 0;
 end case;
 end if;
 end process;

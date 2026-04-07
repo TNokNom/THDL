@@ -10,6 +10,8 @@
   - 2' would be the highest and it would be 2 octaves above 8' (1760 hz)
   - 16' would be one octave below 8' (220 hz)
   - 8' would be directly in the middle (440 hz)
+  - 4' being (880 hz)
+  
     
 * VCO
 

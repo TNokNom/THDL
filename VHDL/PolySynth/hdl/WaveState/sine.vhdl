@@ -4,6 +4,7 @@ use ieee.numeric_std.all;
 
 entity sine is 
 port (
+     en_s1: in std_logic;
      clk  : in std_logic;
      rst  : in std_logic; -- Assuming active-low based on your code
      sine : out std_logic_vector(15 downto 0)
