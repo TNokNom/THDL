@@ -15,7 +15,7 @@ triangle: out std_logic_vector(7 downto 0)
 end triangle;
 architecture behavior of triangle is 
 type me is array (90 downto 0) of integer;
-signal count: integer := 0;
+signal count,counter: integer := 0;
 signal direction: std_logic := '0';
 signal go: std_logic := '0';
 begin
@@ -28,6 +28,19 @@ begin
     count <= 0;
 
 elsif rising_edge(freq_clk) then
+
+
+  if (counter = 255) then 
+    count <= 0;
+    if (direction = '0') then 
+      direction <= '1';
+      count <= 126;
+
+
+
+
+
+
 
   case octave is 
       when "00" =>
