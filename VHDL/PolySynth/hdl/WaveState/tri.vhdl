@@ -44,8 +44,8 @@ elsif rising_edge(freq_clk) then
 
   case octave is 
       when "00" =>
-     if (direction = '0' and count < 20) then 
-       count <= count + 1;
+     if (direction = '0' and count > 20) then 
+       count <= count - 1;
 
      elsif (count = 20) then  
        direction <= '1';
